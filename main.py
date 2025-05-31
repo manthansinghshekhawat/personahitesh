@@ -8,10 +8,14 @@ from openai import AzureOpenAI
 
 # Load environment variables
 load_dotenv()
-AZURE_OPENAI_ENDPOINT = os.getenv("AZURE_OPENAI_ENDPOINT")
-AZURE_OPENAI_API_KEY = os.getenv("AZURE_OPENAI_API_KEY")
-DEPLOYMENT_NAME = os.getenv("DEPLOYMENT_NAME", "gpt-4o")
-API_VERSION = os.getenv("API_VERSION", "2025-01-01-preview")
+# AZURE_OPENAI_ENDPOINT = os.getenv("AZURE_OPENAI_ENDPOINT")
+# AZURE_OPENAI_API_KEY = os.getenv("AZURE_OPENAI_API_KEY")
+# DEPLOYMENT_NAME = os.getenv("DEPLOYMENT_NAME", "gpt-4o")
+# API_VERSION = os.getenv("API_VERSION", "2025-01-01-preview")
+AZURE_OPENAI_ENDPOINT = st.secrets["AZURE_OPENAI_ENDPOINT"]
+AZURE_OPENAI_API_KEY  = st.secrets["AZURE_OPENAI_API_KEY"]
+DEPLOYMENT_NAME = st.secrets["DEPLOYMENT_NAME"]
+API_VERSION     = st.secrets["API_VERSION"]
 
 # Page configuration
 st.set_page_config(
