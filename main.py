@@ -3,11 +3,11 @@ import time
 from datetime import datetime
 
 import streamlit as st
-from dotenv import load_dotenv
+# from dotenv import load_dotenv
 from openai import AzureOpenAI
 
 # Load environment variables
-load_dotenv()
+# load_dotenv()
 # AZURE_OPENAI_ENDPOINT = os.getenv("AZURE_OPENAI_ENDPOINT")
 # AZURE_OPENAI_API_KEY = os.getenv("AZURE_OPENAI_API_KEY")
 # DEPLOYMENT_NAME = os.getenv("DEPLOYMENT_NAME", "gpt-4o")
